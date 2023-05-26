@@ -9,10 +9,10 @@ export default function BackButton({ link }: { link: string }) {
         <button
           className={clsx(
             "flex items-center justify-center space-x-1",
-            "border-[1.5px] border-white bg-white",
+            "border-[1.5px] border-gray-200 bg-gray-200",
             "rounded-md px-3 py-1.5",
             "font-bold text-black transition-all",
-            "hover:bg-black hover:text-white"
+            "hover:bg-black hover:text-gray-100"
           )}
           type="button"
           aria-label="back"

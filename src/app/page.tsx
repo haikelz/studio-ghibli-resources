@@ -64,7 +64,12 @@ export default function HomePage() {
         />
       </div>
       <h1 className="my-4 text-3xl font-bold">Studio Ghibli Resources</h1>
-      <ul className="grid grid-cols-3 grid-rows-1 gap-5 md:flex md:items-center md:justify-center">
+      <ul
+        className={clsx(
+          "grid grid-cols-3 grid-rows-1 gap-5",
+          "md:flex md:items-center md:justify-center"
+        )}
+      >
         {linkList.map((item) => (
           <Link
             className={clsx(

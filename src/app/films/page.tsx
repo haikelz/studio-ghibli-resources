@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { Metadata } from "next";
 import { IBM_Plex_Sans_JP } from "next/font/google";
 import Link from "next/link";
-import BackButton from "~components/ui/BackButton";
+import BackButton from "~components/ui/buttons/BackButton";
 import CardWrapper from "~components/ui/CardWrapper";
 import LightboxImage from "~components/ui/LightboxImage";
 import { configuredOfetch as ofetch } from "~lib/utils/configuredOfetch";
@@ -75,14 +75,14 @@ export default async function Films() {
                   <h3
                     className={clsx(
                       "mt-1 text-2xl font-bold transition-all",
-                      "cursor-pointer transition-all group-hover:text-blue-500"
+                      "group-hover:text-blue-500"
                     )}
                   >
                     {title}
                   </h3>
                   <p className="my-3 line-clamp-4 text-base">{description}</p>
                   <p className="text-base">
-                    <span className={clsx("hover:text-blue", "font-bold")}>Score:</span> {rt_score}
+                    <span className="font-bold">Score: </span> {rt_score}
                   </p>
                 </div>
               </Link>

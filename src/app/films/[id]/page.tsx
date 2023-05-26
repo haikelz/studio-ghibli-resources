@@ -1,8 +1,6 @@
-import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import clsx from "clsx";
 import { Metadata } from "next";
-import Link from "next/link";
-import BackButton from "~components/ui/BackButton";
+import BackButton from "~components/ui/buttons/BackButton";
 import LightboxImage from "~components/ui/LightboxImage";
 import { configuredOfetch as ofetch } from "~lib/utils/configuredOfetch";
 import { BaseFilmsProps, FilmsProps } from "~models";
@@ -58,32 +56,30 @@ async function getData(id: string): Promise<DetailFilmProps> {
 
 export default async function DetailFilm({ params }: { params: { id: string } }) {
   const { id } = params;
-  const detailFilm = (await getData(id)).data;
+  const { movie_banner, title, director, producer, release_date, rt_score, description } = (
+    await getData(id)
+  ).data;
 
   return (
     <div className="flex w-full items-center justify-center">
       <div className={clsx("flex flex-col items-center justify-center", "md:w-[600px]")}>
-        <LightboxImage
-          className="rounded-md"
-          src={detailFilm.movie_banner}
-          alt={detailFilm.title}
-        />
-        <h3 className="mb-8 mt-5 text-3xl font-bold">{detailFilm.title}</h3>
+        <LightboxImage className="rounded-md" src={movie_banner} alt={title} />
+        <h3 className="mb-8 mt-5 text-3xl font-bold">{title}</h3>
         <div className="space-y-2 text-base">
           <p>
-            <span className="font-bold">Director</span> {detailFilm.director}
+            <span className="font-bold">Director</span> {director}
           </p>
           <p>
-            <span className="font-bold">Producer:</span> {detailFilm.producer}
+            <span className="font-bold">Producer:</span> {producer}
           </p>
           <p>
-            <span className="font-bold">Release Date:</span> {detailFilm.release_date}
+            <span className="font-bold">Release Date:</span> {release_date}
           </p>
           <p>
-            <span className="font-bold">Score:</span> {detailFilm.rt_score}
+            <span className="font-bold">Score:</span> {rt_score}
           </p>
           <p>
-            <span className="font-bold">Description:</span> {detailFilm.description}
+            <span className="font-bold">Description:</span> {description}
           </p>
         </div>
         <BackButton link="/films" />

@@ -6,5 +6,6 @@
 ## Tech Stack
 
 - Next JS 13 App Dir
+- Typescript
 - Tailwind CSS
 

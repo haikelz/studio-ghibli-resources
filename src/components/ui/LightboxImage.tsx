@@ -3,8 +3,8 @@
 import clsx from "clsx";
 import Image from "next/image";
 import { useState } from "react";
-import Lightbox from "yet-another-react-lightbox";
 import Captions from "yet-another-react-lightbox/plugins/captions";
+import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/plugins/captions.css";
 import "yet-another-react-lightbox/styles.css";
 
@@ -22,7 +22,7 @@ export default function LightboxImage({ src, alt, className }: LightboxImageProp
     <>
       <Image
         className={clsx(
-          "cursor-pointer object-cover duration-700",
+          "aspect-auto w-full cursor-pointer duration-700",
           isLoading ? "blur-md" : "blur-none",
           className
         )}
@@ -32,8 +32,8 @@ export default function LightboxImage({ src, alt, className }: LightboxImageProp
         loading="lazy"
         src={src}
         alt={alt}
-        width={600}
-        height={900}
+        width={500}
+        height={500}
       />
       {isOpen ? (
         <Lightbox
@@ -45,7 +45,7 @@ export default function LightboxImage({ src, alt, className }: LightboxImageProp
             slide: () => {
               return (
                 <Image
-                  className="rounded-md"
+                  className="aspect-auto rounded-md"
                   src={src}
                   alt={alt}
                   loading="eager"

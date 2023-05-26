@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { Metadata } from "next";
-import BackButton from "~components/ui/BackButton";
+import BackButton from "~components/ui/buttons/BackButton";
 import CardWrapper from "~components/ui/CardWrapper";
 import { configuredOfetch as ofetch } from "~lib/utils/configuredOfetch";
 import { DEFAULT_OG_URL } from "~lib/utils/constants";
@@ -55,7 +55,7 @@ export default async function Vehicles() {
         {vehicles.data.map((item) => (
           <CardWrapper key={item.id}>
             <div className="group p-4">
-              <h3 className="text-2xl font-bold transition-all group-hover:text-blue-500">
+              <h3 className="mt-1 text-2xl font-bold transition-all group-hover:text-blue-500">
                 {item.name}
               </h3>
               <div className="mt-3">
