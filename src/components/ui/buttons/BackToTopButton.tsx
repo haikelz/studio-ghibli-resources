@@ -11,13 +11,14 @@ export default function BackToTopButton() {
     <>
       {scroll > 200 ? (
         <button
-          className={clsx(
-            "fixed bottom-5 right-4 z-10",
-            "rounded-md bg-gray-200 p-2 transition-all",
-            "hover:bg-gray-300"
-          )}
           type="button"
           aria-label="back to top"
+          className={clsx(
+            "fixed bottom-4 right-4 z-10",
+            "rounded-md bg-gray-200 p-2 transition-all",
+            "md:bottom-6 md:right-6",
+            "hover:bg-gray-300"
+          )}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <ArrowUpIcon width={24} height={24} className="text-black " />

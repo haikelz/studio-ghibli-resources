@@ -7,6 +7,8 @@ export default function BackButton({ link }: { link: string }) {
     <div className="mt-6 flex w-full items-center justify-start">
       <Link href={link}>
         <button
+          type="button"
+          aria-label="back"
           className={clsx(
             "flex items-center justify-center space-x-1",
             "border-[1.5px] border-gray-200 bg-gray-200",
@@ -14,8 +16,6 @@ export default function BackButton({ link }: { link: string }) {
             "font-bold text-black transition-all",
             "hover:bg-black hover:text-gray-100"
           )}
-          type="button"
-          aria-label="back"
         >
           <ArrowLeftIcon width={20} height={20} />
           <span>Back</span>
