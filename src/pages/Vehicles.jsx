@@ -63,7 +63,6 @@ const MemoizedList = memo(({ data }) => {
               fontSize: 25,
               lineHeight: 25,
               color: "#e5e7eb",
-
               fontFamily: "Inter_700Bold",
             }}
           >

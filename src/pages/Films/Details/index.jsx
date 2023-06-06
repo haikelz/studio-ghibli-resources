@@ -95,7 +95,7 @@ export default function FilmDetails({ route }) {
               fontFamily: "Inter_400Regular",
             }}
           >
-            <Text style={{ fontFamily: "Inter_600SemiBold" }}>
+            <Text style={{ fontFamily: "Inter_600SemiBold", lineHeight: 25 }}>
               Description:{" "}
             </Text>
             {film.description}

@@ -22,12 +22,9 @@ export default function App() {
   const Stack = createNativeStackNavigator();
 
   return (
-    <NavigationContainer them={GlobalTheme}>
+    <NavigationContainer theme={GlobalTheme}>
       <Stack.Navigator
-        screenOptions={{
-          contentStyle: { backgroundColor: "#1c1c1c" },
-          animation: "none",
-        }}
+        screenOptions={{ animation: "none" }}
         initialRouteName="Home"
       >
         <Stack.Screen name="Home" component={Home} />
