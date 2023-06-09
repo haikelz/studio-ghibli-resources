@@ -64,9 +64,18 @@ export default async function Locations() {
                 {item.name}
               </h3>
               <div className="mt-3">
-                <p className="text-base">Climate: {item.climate}</p>
-                <p>Terrain: {item.terrain}</p>
-                <p>Surface Water: {item.surface_water}</p>
+                <p className="text-base">
+                  <span className="font-semibold">Climate: </span>
+                  {item.climate}
+                </p>
+                <p className="text-base">
+                  <span className="font-semibold">Terrain: </span>
+                  {item.terrain}
+                </p>
+                <p className="text-base">
+                  <span className="font-semibold">Surface Water: </span>
+                  {item.surface_water}
+                </p>
               </div>
             </div>
           </CardWrapper>

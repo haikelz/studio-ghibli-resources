@@ -64,8 +64,14 @@ export default async function People() {
                 {item.name}
               </h3>
               <div className="mt-3">
-                <p className="text-base">Gender: {item.gender}</p>
-                <p>Age: {item.age}</p>
+                <p className="text-base">
+                  <span className="font-semibold">Gender: </span>
+                  {item.gender}
+                </p>
+                <p className="text-base">
+                  <span className="font-semibold">Age: </span>
+                  {item.age}
+                </p>
               </div>
             </div>
           </CardWrapper>

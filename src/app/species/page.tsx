@@ -64,7 +64,14 @@ export default async function Species() {
                 {item.name}
               </h3>
               <div className="mt-3">
-                <p className="text-base">Classification: {item.classification}</p>
+                <p className="text-base">
+                  <span className="font-semibold">Name: </span>
+                  {item.name}
+                </p>
+                <p className="text-base">
+                  <span className="font-semibold">Classification: </span>
+                  {item.classification}
+                </p>
               </div>
             </div>
           </CardWrapper>

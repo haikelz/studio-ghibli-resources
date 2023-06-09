@@ -60,7 +60,7 @@ export default async function Vehicles() {
               </h3>
               <div className="mt-3">
                 <p className="text-base">{item.description}</p>
-                <p>
+                <p className="mt-3">
                   <span className="font-bold">Class:</span> {item.vehicle_class}
                 </p>
               </div>

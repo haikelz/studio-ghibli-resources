@@ -1,8 +1,8 @@
 {
-  "name": "studio-ghibli-resources",
+  "name": "studio-ghibli-resources-website-version",
   "version": "0.1.0",
   "private": true,
-  "description": "Studio Ghibli Resources",
+  "description": "Website Version of Studio Ghibli Resources",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
