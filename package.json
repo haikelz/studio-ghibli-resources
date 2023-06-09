@@ -1,5 +1,8 @@
 {
   "name": "studio-ghibli-resources-app",
+  "author": {
+    "name": "Haikel Ilham Hakim"
+  },
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {

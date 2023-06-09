@@ -4,18 +4,15 @@ import CardWrapper from "../components/ui/CardWrapper";
 import ErrorWhenFetch from "../components/ui/ErrorWhenFetch";
 import Layout from "../components/ui/Layout";
 import Loading from "../components/ui/Loading";
-import { useFetch, useFontsLoaded } from "../hooks";
+import { useFetch } from "../hooks";
 
 export default function Vehicles() {
-  const fontsLoaded = useFontsLoaded();
-
   const { data, isLoading, isError } = useFetch(
     "https://ghibli-api.vercel.app/api/vehicles"
   );
 
   if ((!data && !isError) || isLoading) return <Loading />;
   if (isError || typeof data.data === "undefined") return <ErrorWhenFetch />;
-  if (!fontsLoaded) return null;
 
   return (
     <Layout>
@@ -39,7 +36,7 @@ const MemoizedList = memo(({ data }) => {
               textAlign: "center",
             }}
           >
-            People List
+            Vehicles List
           </Text>
           <Text
             style={{
@@ -49,7 +46,7 @@ const MemoizedList = memo(({ data }) => {
               textAlign: "center",
             }}
           >
-            Studio Ghibli People list
+            Studio Ghibli Vehicles list
           </Text>
         </View>
       )}

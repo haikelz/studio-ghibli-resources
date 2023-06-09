@@ -1,6 +1,5 @@
 import { Image, Pressable, Text, View } from "react-native";
 import Layout from "../components/ui/Layout";
-import { useFontsLoaded } from "../hooks";
 
 const linkList = [
   { id: 1, route: "Films" },
@@ -11,9 +10,6 @@ const linkList = [
 ];
 
 export default function Home({ navigation }) {
-  const fontsLoaded = useFontsLoaded();
-  if (!fontsLoaded) return null;
-
   return (
     <Layout>
       <View

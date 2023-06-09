@@ -1,5 +1,6 @@
 import { DefaultTheme, NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { useFontsLoaded } from "./src/hooks";
 import Films from "./src/pages/Films";
 import FilmDetails from "./src/pages/Films/Details";
 import Home from "./src/pages/Home";
@@ -20,6 +21,9 @@ const GlobalTheme = {
 
 export default function App() {
   const Stack = createNativeStackNavigator();
+
+  const fontsLoaded = useFontsLoaded();
+  if (!fontsLoaded) return null;
 
   return (
     <NavigationContainer theme={GlobalTheme}>

@@ -1,10 +1,6 @@
 import { SafeAreaView, StatusBar, Text } from "react-native";
-import { useFontsLoaded } from "../../hooks/useFontsLoaded";
 
 export default function Loading() {
-  const fontsLoaded = useFontsLoaded();
-  if (!fontsLoaded) return null;
-
   return (
     <SafeAreaView
       style={{

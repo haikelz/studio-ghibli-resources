@@ -1,21 +1,18 @@
 import { memo } from "react";
 import { FlatList, Text, View } from "react-native";
+import CardWrapper from "../components/ui/CardWrapper";
 import ErrorWhenFetch from "../components/ui/ErrorWhenFetch";
 import Layout from "../components/ui/Layout";
 import Loading from "../components/ui/Loading";
-import { useFetch, useFontsLoaded } from "../hooks";
-import CardWrapper from "../components/ui/CardWrapper";
+import { useFetch } from "../hooks";
 
 export default function Locations() {
-  const fontsLoaded = useFontsLoaded();
-
   const { data, isLoading, isError } = useFetch(
     "https://ghibli-api.vercel.app/api/locations"
   );
 
   if ((!data && !isError) || isLoading) return <Loading />;
   if (isError || typeof data.data === "undefined") return <ErrorWhenFetch />;
-  if (!fontsLoaded) return null;
 
   return (
     <Layout>

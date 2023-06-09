@@ -5,19 +5,15 @@ import BackButton from "../../components/ui/BackButton";
 import ErrorWhenFetch from "../../components/ui/ErrorWhenFetch";
 import Layout from "../../components/ui/Layout";
 import Loading from "../../components/ui/Loading";
-import { useFetch, useFontsLoaded } from "../../hooks";
+import { useFetch } from "../../hooks";
 
 export default function Films({ navigation }) {
-  const fontsLoaded = useFontsLoaded();
-
   const { data, isLoading, isError } = useFetch(
     "https://ghibli-api.vercel.app/api/films"
   );
 
   if ((!data && !isError) || isLoading) return <Loading />;
   if (isError || typeof data.data === "undefined") return <ErrorWhenFetch />;
-
-  if (!fontsLoaded) return null;
 
   return (
     <Layout>
