@@ -17,7 +17,7 @@ export default function ErrorWhenFetch() {
       <Text
         style={{ fontFamily: "Inter_700Bold", fontSize: 20, color: "#e5e7eb" }}
       >
-        Loading....
+        Error!
       </Text>
     </SafeAreaView>
   );
