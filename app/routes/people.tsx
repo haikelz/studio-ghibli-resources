@@ -2,6 +2,7 @@ import { V2_MetaFunction, json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import clsx from "clsx";
 import CardWrapper from "~/components/ui/CardWrapper";
+import Layout from "~/components/ui/Layout";
 import { BackToPreviousButton } from "~/components/ui/buttons";
 import { PeopleProps } from "~/interfaces";
 import { ofetch } from "~/lib/utils/configuredOfetch";
@@ -21,7 +22,7 @@ export default function People() {
   const { people } = useLoaderData<typeof loader>();
 
   return (
-    <>
+    <Layout>
       <div className="flex flex-col items-center justify-center text-center">
         <h1 className="text-4xl font-bold tracking-wide">People List</h1>
         <p className="mt-2 text-lg font-medium">Studio Ghibli People list</p>
@@ -59,6 +60,6 @@ export default function People() {
         ))}
       </section>
       <BackToPreviousButton link="/" />
-    </>
+    </Layout>
   );
 }

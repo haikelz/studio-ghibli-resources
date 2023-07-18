@@ -1,13 +1,25 @@
+import { AnimatePresence, LazyMotion, domAnimation, m } from "framer-motion";
 import { ChildrenProps } from "~/interfaces";
-import BackToTopButton from "./buttons/BackToTopButton";
+import { BackToTopButton } from "./buttons";
+import { useLocation } from "@remix-run/react";
 
 export default function Layout({ children }: ChildrenProps) {
+  const location = useLocation();
+
   return (
-    <>
-      <div className="flex w-full items-center justify-center">
-        <main className="container mx-auto">{children}</main>
-      </div>
-      <BackToTopButton />
-    </>
+    <LazyMotion features={domAnimation}>
+      <AnimatePresence mode="sync">
+        <m.div
+          key={location.pathname}
+          transition={{ duration: 0.3 }}
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="flex w-full items-center justify-center"
+        >
+          <main className="container mx-auto">{children}</main>
+        </m.div>
+        <BackToTopButton />
+      </AnimatePresence>
+    </LazyMotion>
   );
 }

@@ -6,7 +6,11 @@ module.exports = {
   // serverBuildPath: "build/index.js",
   // publicPath: "/build/",
   serverModuleFormat: "cjs",
-  serverDependenciesToBundle: [/^yet-another-react-lightbox.*/],
+  serverDependenciesToBundle: [
+    /^yet-another-react-lightbox.*/,
+    /^ofetch*/,
+    /^node-fetch-native*/,
+  ],
   tailwind: true,
   postcss: true,
   future: {
