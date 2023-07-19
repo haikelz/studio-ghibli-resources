@@ -5,13 +5,14 @@ import CardWrapper from "~/components/ui/CardWrapper";
 import Layout from "~/components/ui/Layout";
 import LightboxImage from "~/components/ui/LightboxImage";
 import { BackToPreviousButton } from "~/components/ui/buttons";
-import { FilmsProps } from "~/interfaces";
 import { ofetch } from "~/lib/utils/configuredOfetch";
+import { FilmsProps } from "~/models";
 
 export function meta() {
   return [
     {
       title: "Films",
+      description: "Studio Ghibli Films list",
     },
   ];
 }

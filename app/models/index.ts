@@ -24,6 +24,10 @@ export type FilmsProps = {
   data: BaseFilmsProps[];
 };
 
+export type DetailFilmProps = {
+  data: BaseFilmsProps;
+};
+
 export interface BaseLocationsProps {
   id: string;
   name: string;

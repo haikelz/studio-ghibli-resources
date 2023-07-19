@@ -4,14 +4,14 @@ import clsx from "clsx";
 import CardWrapper from "~/components/ui/CardWrapper";
 import Layout from "~/components/ui/Layout";
 import { BackToPreviousButton } from "~/components/ui/buttons";
-import { VehiclesProps } from "~/interfaces";
 import { ofetch } from "~/lib/utils/configuredOfetch";
+import { VehiclesProps } from "~/models";
 
 export const meta: V2_MetaFunction = () => {
   return [
     {
       title: "Vehicles List",
-      name: "Studio Ghibli Vehicles list",
+      description: "Studio Ghibli Vehicles list",
     },
   ];
 };

@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { ChildrenProps } from "~/interfaces";
+import { ChildrenProps } from "~/models";
 
 export default function CardWrapper({ children }: ChildrenProps) {
   return (

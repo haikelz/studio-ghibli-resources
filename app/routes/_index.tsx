@@ -36,7 +36,7 @@ export const meta: V2_MetaFunction = () => {
   return [
     {
       title: "Studio Ghibli Resources",
-      name: "A Website that containts Studio Ghibli resources",
+      description: "A Website that containts Studio Ghibli resources",
     },
   ];
 };
@@ -47,11 +47,7 @@ export default function Index() {
       <div className="flex flex-col items-center justify-center">
         <div className="overflow-hidden rounded-md">
           <LightboxImage
-            className={clsx(
-              "h-[250px w-[400px] rounded-md",
-              "hover:scale-110",
-              "md:h-[250px]"
-            )}
+            className={clsx("h-[250px w-[400px] rounded-md", "md:h-[250px]")}
             src="https://cdn.myanimelist.net/images/company/21.png"
             alt="Studio Ghibli"
           />

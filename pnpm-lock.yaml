@@ -10,6 +10,7 @@ specifiers:
   '@remix-run/serve': ^1.18.1
   '@types/react': ^18.0.35
   '@types/react-dom': ^18.0.11
+  '@types/react-lazy-load-image-component': ^1.5.3
   autoprefixer: ^10.4.14
   classix: ^2.1.33
   clsx: ^2.0.0
@@ -21,6 +22,7 @@ specifiers:
   postcss: ^8.4.26
   react: ^18.2.0
   react-dom: ^18.2.0
+  react-lazy-load-image-component: ^1.6.0
   tailwindcss: ^3.3.3
   typescript: ^5.0.4
   yet-another-react-lightbox: ^3.11.4
@@ -38,6 +40,7 @@ dependencies:
   ofetch: 1.1.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-lazy-load-image-component: 1.6.0_biqbaboplfbrettd7655fr4n2y
   yet-another-react-lightbox: 3.11.4_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
@@ -45,6 +48,7 @@ devDependencies:
   '@remix-run/eslint-config': 1.18.1_p46jtelqwrgyvrgcjl55kkoju4
   '@types/react': 18.2.15
   '@types/react-dom': 18.2.7
+  '@types/react-lazy-load-image-component': 1.5.3
   autoprefixer: 10.4.14_postcss@8.4.26
   classix: 2.1.33
   eslint: 8.45.0
@@ -2316,6 +2320,13 @@ packages:
     resolution: {integrity: sha512-GRaAEriuT4zp9N4p1i8BDBYmEyfo+xQ3yHjJU4eiK5NDa1RmUZG+unZABUTK4/Ox/M+GaHwb6Ow8rUITrtjszA==}
     dependencies:
       '@types/react': 18.2.15
+    dev: true
+
+  /@types/react-lazy-load-image-component/1.5.3:
+    resolution: {integrity: sha512-hTzsQQ64mmPR6W03DQr6zhzeBGn17ExnVd7sLHqTQZQVd9Oi0Dy7tfSPgK0+AZV5YNC+e8Jw7oq9kzYfDkCDCA==}
+    dependencies:
+      '@types/react': 18.2.15
+      csstype: 3.1.2
     dev: true
 
   /@types/react/18.2.15:
@@ -5307,11 +5318,14 @@ packages:
 
   /lodash.debounce/4.0.8:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
-    dev: true
 
   /lodash.merge/4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
     dev: true
+
+  /lodash.throttle/4.1.1:
+    resolution: {integrity: sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==}
+    dev: false
 
   /lodash/4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
@@ -6670,6 +6684,18 @@ packages:
   /react-is/17.0.2:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
     dev: true
+
+  /react-lazy-load-image-component/1.6.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-8KFkDTgjh+0+PVbH+cx0AgxLGbdTsxWMnxXzU5HEUztqewk9ufQAu8cstjZhyvtMIPsdMcPZfA0WAa7HtjQbBQ==}
+    peerDependencies:
+      react: ^15.x.x || ^16.x.x || ^17.x.x || ^18.x.x
+      react-dom: ^15.x.x || ^16.x.x || ^17.x.x || ^18.x.x
+    dependencies:
+      lodash.debounce: 4.0.8
+      lodash.throttle: 4.1.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
 
   /react-refresh/0.14.0:
     resolution: {integrity: sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==}

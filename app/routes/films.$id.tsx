@@ -4,16 +4,8 @@ import clsx from "clsx";
 import Layout from "~/components/ui/Layout";
 import LightboxImage from "~/components/ui/LightboxImage";
 import { BackToPreviousButton } from "~/components/ui/buttons";
-import { BaseFilmsProps } from "~/interfaces";
 import { ofetch } from "~/lib/utils/configuredOfetch";
-
-type DetailFilmProps = {
-  data: BaseFilmsProps;
-};
-
-export const meta: V2_MetaFunction = () => {
-  return [{ title: "Detail Film", name: "Detail Film" }];
-};
+import { DetailFilmProps } from "~/models";
 
 export async function loader({ params }: LoaderArgs) {
   const { id } = params;
@@ -23,6 +15,15 @@ export async function loader({ params }: LoaderArgs) {
 
   return json({ detailFilm: response.data });
 }
+
+export const meta: V2_MetaFunction<typeof loader> = ({ data }) => {
+  return [
+    {
+      title: data?.detailFilm.title,
+      description: data?.detailFilm.description,
+    },
+  ];
+};
 
 export default function DetailFilm() {
   const { detailFilm } = useLoaderData<typeof loader>();

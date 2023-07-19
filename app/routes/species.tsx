@@ -4,14 +4,14 @@ import clsx from "clsx";
 import CardWrapper from "~/components/ui/CardWrapper";
 import Layout from "~/components/ui/Layout";
 import { BackToPreviousButton } from "~/components/ui/buttons";
-import { SpeciesProps } from "~/interfaces";
 import { ofetch } from "~/lib/utils/configuredOfetch";
+import { SpeciesProps } from "~/models";
 
 export const meta: V2_MetaFunction = () => {
   return [
     {
       title: "New Remix App",
-      name: "Studio Ghibli Species list",
+      description: "Studio Ghibli Species list",
     },
   ];
 };

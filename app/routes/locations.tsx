@@ -4,11 +4,11 @@ import clsx from "clsx";
 import CardWrapper from "~/components/ui/CardWrapper";
 import Layout from "~/components/ui/Layout";
 import { BackToPreviousButton } from "~/components/ui/buttons";
-import { LocationsProps } from "~/interfaces";
 import { ofetch } from "~/lib/utils/configuredOfetch";
+import { LocationsProps } from "~/models";
 
 export const meta: V2_MetaFunction = () => {
-  return [{ title: "Locations List", name: "Studio Ghibli locations" }];
+  return [{ title: "Locations List", description: "Studio Ghibli locations" }];
 };
 
 export async function loader() {

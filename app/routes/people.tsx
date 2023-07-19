@@ -4,11 +4,11 @@ import clsx from "clsx";
 import CardWrapper from "~/components/ui/CardWrapper";
 import Layout from "~/components/ui/Layout";
 import { BackToPreviousButton } from "~/components/ui/buttons";
-import { PeopleProps } from "~/interfaces";
 import { ofetch } from "~/lib/utils/configuredOfetch";
+import { PeopleProps } from "~/models";
 
 export const meta: V2_MetaFunction = () => {
-  return [{ title: "People List", name: "Studio Ghibli People list" }];
+  return [{ title: "People List", description: "Studio Ghibli People list" }];
 };
 
 export async function loader() {

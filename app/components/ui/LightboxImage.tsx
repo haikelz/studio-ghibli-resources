@@ -1,5 +1,7 @@
 import clsx from "clsx";
 import { useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import Lightbox from "yet-another-react-lightbox";
 import Captions from "yet-another-react-lightbox/plugins/captions";
 import "yet-another-react-lightbox/plugins/captions.css";
@@ -16,14 +18,13 @@ export default function LightboxImage({
   alt,
   className,
 }: LightboxImageProps) {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
     <>
-      <img
+      <LazyLoadImage
         className={clsx(
-          "aspect-auto w-full cursor-pointer duration-700",
+          "aspect-auto w-full transition-all cursor-pointer",
           className
         )}
         onClick={() => setIsOpen(true)}
@@ -31,8 +32,7 @@ export default function LightboxImage({
         loading="lazy"
         src={src}
         alt={alt}
-        width={500}
-        height={500}
+        effect="blur"
       />
       {isOpen ? (
         <Lightbox
