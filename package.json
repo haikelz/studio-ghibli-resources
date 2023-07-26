@@ -1,0 +1,45 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "build": "remix build",
+    "predev": "rimraf ./public/_redirects",
+    "dev": "remix dev",
+    "start": "netlify serve",
+    "typecheck": "tsc -b"
+  },
+  "dependencies": {
+    "@netlify/functions": "^1.3.0",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@remix-run/css-bundle": "^1.19.1",
+    "@remix-run/netlify": "^1.19.1",
+    "@remix-run/node": "^1.19.1",
+    "@remix-run/react": "^1.19.1",
+    "clsx": "^2.0.0",
+    "cross-env": "^7.0.3",
+    "framer-motion": "^10.13.1",
+    "jotai": "^2.2.2",
+    "ofetch": "^1.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-lazy-load-image-component": "^1.6.0",
+    "yet-another-react-lightbox": "^3.11.4"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.19.1",
+    "@remix-run/eslint-config": "^1.19.1",
+    "@remix-run/serve": "^1.19.1",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.8",
+    "@types/react-lazy-load-image-component": "^1.5.3",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.27.0",
+    "postcss": "^8.4.27",
+    "rimraf": "^4.1.4",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^4.8.4"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
