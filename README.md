@@ -1,6 +1,6 @@
 <div align="center">
   <h1>studio-ghibli-resources</h1>
-  <p>Website version of studio-ghibli-resources project</p>
+  <p>Website version of Studio Ghibli Resources</p>
 </div>
 
 ## Stuff
