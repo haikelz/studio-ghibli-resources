@@ -1,7 +1,7 @@
 import { V2_MetaFunction, json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import clsx from "clsx";
-import { BackToPreviousButton } from "~/components/ui/buttons";
+import { BackToPrevious } from "~/components/ui/buttons";
 import CardWrapper from "~/components/ui/card-wrapper";
 import Layout from "~/components/ui/layout";
 import { BaseSpeciesProps } from "~/interfaces";
@@ -14,7 +14,7 @@ type SpeciesProps = {
 export const meta: V2_MetaFunction = () => {
   return [
     {
-      title: "New Remix App",
+      title: "Species List",
     },
     { description: "Studio Ghibli Species list" },
   ];
@@ -68,7 +68,7 @@ export default function Species() {
           </CardWrapper>
         ))}
       </section>
-      <BackToPreviousButton link="/" />
+      <BackToPrevious link="/" />
     </Layout>
   );
 }

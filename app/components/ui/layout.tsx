@@ -1,7 +1,7 @@
 import { useLocation } from "@remix-run/react";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import { ChildrenProps } from "~/interfaces";
-import { BackToTopButton } from "./buttons";
+import { BackToTop } from "./buttons";
 
 export default function Layout({ children }: ChildrenProps) {
   const location = useLocation();
@@ -17,7 +17,7 @@ export default function Layout({ children }: ChildrenProps) {
       >
         <main className="container mx-auto">{children}</main>
       </m.div>
-      <BackToTopButton />
+      <BackToTop />
     </LazyMotion>
   );
 }

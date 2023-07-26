@@ -1,7 +1,7 @@
 import { json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
 import clsx from "clsx";
-import { BackToPreviousButton } from "~/components/ui/buttons";
+import { BackToPrevious } from "~/components/ui/buttons";
 import CardWrapper from "~/components/ui/card-wrapper";
 import Layout from "~/components/ui/layout";
 import LightboxImage from "~/components/ui/lightbox-image";
@@ -25,7 +25,6 @@ export async function loader() {
   const response: FilmsProps = await ofetch(
     "https://ghibli-api.vercel.app/api/films"
   );
-
   return json({ films: response });
 }
 
@@ -80,7 +79,7 @@ export default function Films() {
           );
         })}
       </section>
-      <BackToPreviousButton link="/" />
+      <BackToPrevious link="/" />
     </Layout>
   );
 }

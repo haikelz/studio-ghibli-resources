@@ -8,6 +8,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { Provider } from "jotai";
+import ProgressBar from "./components/ui/progress-bar";
 import "./tailwind.css";
 
 export const links: LinksFunction = () => [
@@ -16,17 +18,20 @@ export const links: LinksFunction = () => [
 
 export default function App() {
   return (
-    <html lang="en">
-      <head>
-        <Meta />
-        <Links />
-      </head>
-      <body className="bg-[#1c1c1c] min-h-screen p-4 text-gray-100 md:p-6">
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
-      </body>
-    </html>
+    <Provider>
+      <html lang="en">
+        <head>
+          <Meta />
+          <Links />
+        </head>
+        <body className="bg-[#1c1c1c] min-h-screen p-4 text-gray-100 md:p-6">
+          <ProgressBar />
+          <Outlet />
+          <ScrollRestoration />
+          <Scripts />
+          <LiveReload />
+        </body>
+      </html>
+    </Provider>
   );
 }

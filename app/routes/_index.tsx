@@ -48,7 +48,7 @@ export default function Index() {
         <div className="overflow-hidden rounded-md">
           <LightboxImage
             className={clsx("h-[250px w-[400px] rounded-md", "md:h-[250px]")}
-            src="https://cdn.myanimelist.net/images/company/21.png"
+            src="/images/studio-ghibli.png"
             alt="Studio Ghibli"
           />
         </div>

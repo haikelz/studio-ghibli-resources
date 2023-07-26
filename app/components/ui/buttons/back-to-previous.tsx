@@ -2,7 +2,7 @@ import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import { Link } from "@remix-run/react";
 import clsx from "clsx";
 
-export function BackToPreviousButton({ link }: { link: string }) {
+export function BackToPrevious({ link }: { link: string }) {
   return (
     <div className="mt-6 flex w-full items-center justify-start">
       <Link to={link}>

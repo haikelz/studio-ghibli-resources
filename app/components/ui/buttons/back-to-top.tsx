@@ -1,8 +1,9 @@
 import { ArrowUpIcon } from "@radix-ui/react-icons";
 import clsx from "clsx";
 import { useScroll } from "~/hooks";
+import { m } from "framer-motion";
 
-export function BackToTopButton() {
+export function BackToTop() {
   const scroll = useScroll();
 
   return (

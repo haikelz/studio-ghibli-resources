@@ -1,7 +1,7 @@
 import { LoaderArgs, V2_MetaFunction, json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import clsx from "clsx";
-import { BackToPreviousButton } from "~/components/ui/buttons";
+import { BackToPrevious } from "~/components/ui/buttons";
 import Layout from "~/components/ui/layout";
 import LightboxImage from "~/components/ui/lightbox-image";
 import { BaseFilmsProps } from "~/interfaces";
@@ -13,6 +13,7 @@ type DetailFilmProps = {
 
 export async function loader({ params }: LoaderArgs) {
   const { id } = params;
+
   const response: DetailFilmProps = await ofetch(
     `https://ghibli-api.vercel.app/api/films/${id}`
   );
@@ -73,7 +74,7 @@ export default function DetailFilm() {
               <span className="font-bold">Description:</span> {description}
             </p>
           </div>
-          <BackToPreviousButton link="/films" />
+          <BackToPrevious link="/films" />
         </div>
       </div>
     </Layout>
